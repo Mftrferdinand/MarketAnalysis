@@ -1,63 +1,65 @@
 ---
 name: market-analysis-format-aes
-description: Market analysis format standard by @mftrferdinand - Astronacci + Fibonacci + Fear & Greed, universal untuk XAUUSD/BTC/forex/index
+description: Market analysis format standard by @mftrferdinand - Astronacci + Fibonacci + Fear & Greed, universal for XAUUSD/BTC/forex/index
 ---
 
-# XAUUSD Market Analysis Format — AES
+# Market Analysis Format — AES
 
-## 🔴 CRITICAL: Format Pal absolute — JANGAN NGACO
+## 🔴 CRITICAL: ABSOLUTE FORMAT — DO NOT IMPROVISE
 
-Format ini sudah melalui 20+ iterasi dan user MARAH BESAR tiap kali format salah. BACA INI DULU SEBELUM OUTPUT APA PUN:
+This format has been through 20+ iterations and the user gets FURIOUS every time the format is wrong. READ THIS BEFORE ANY OUTPUT:
 
-1. **Bold `** **`** untuk: judul utama, semua section titles
-2. **Code block ` ``` `** untuk: tabel teknikal, history data — bukan yang lain
-3. **Teks biasa** untuk: Fundamental paragraf, Price Movement, Waiting Sell/Buy Area, Mirroring Assistant Intraday
-4. **Link WAJIB di-embed** di teks Fundamental pake `[teks](link)` — jangan taruh link terpisah di akhir
-5. **Fear & Greed WAJIB** tiap Fundamental dengan link alternative.me
-6. **History Data TETAP muncul** walau cuma Waiting Order
-7. Jangan pernah kirim output teks polos (tanpa bold / tanpa code block). User MARAH kalo itu terjadi
-8. Jangan pernah kirim output yang kelebihan markdown (code block di entry area, dll)
-9. Berlaku untuk SEMUA pair (XAUUSD, BTC, EURUSD, dll)
+1. **Bold `** **`** for: main title, all section titles
+2. **Code block ` ``` `** for: technical table, history data — nothing else
+3. **Plain text** for: Fundamental paragraph, Price Movement, Waiting Sell/Buy Area, Mirroring Assistant Intraday
+4. **Links MUST be embedded** in the Fundamental text using `[text](link)` — never put links separately at the end
+5. **Fear & Greed MUST** be in every Fundamental with link to alternative.me
+6. **History Data MUST appear** even if it's just Waiting Order
+7. Never send plain text output (without bold / without code block). The user gets ANGRY when this happens
+8. Never send over-formatted output (code block in entry area, etc.)
+9. Applies to ALL pairs (XAUUSD, BTC, EURUSD, etc.)
 
-XAUUSD analysis format dengan standard Astronacci + Fibonacci. Bisa dipake buat pair lain juga. Author: @mftrferdinand.
+Market analysis format using Astronacci + Fibonacci standard. Works for any pair. Author: @mftrferdinand.
 
-## Cara Install
+## Installation
 
 ```
-hermes skills install https://raw.githubusercontent.com/mftrferdinand/hermes-xauusd-skill/main/SKILL.md
+hermes skills install https://raw.githubusercontent.com/Mftrferdinand/market-analysis-format-aes/main/SKILL.md
 ```
 
-Atau clone repo ini ke `~/.hermes/skills/`:
+Or clone into `~/.hermes/skills/`:
 ```
-git clone https://github.com/mftrferdinand/hermes-xauusd-skill ~/.hermes/skills/research/xauusd-aes
+git clone https://github.com/Mftrferdinand/market-analysis-format-aes ~/.hermes/skills/research/market-analysis-format
 ```
 
-## Format Output Final
+## Output Format
 
-### Template Lengkap (XAUUSD) — Contoh Output PERSIS
+### Full Template (XAUUSD) — EXACT Output Example
 
 **XAUUSD - $3,985 Live Analyst1**
-**1 Juli 2026, 09:52 WIB**
+**1 July 2026, 09:52 WIB**
 
 **Fundamental Economic Global**
-Gold turun ke $3,985 setelah gagal bertahan di atas $4,000. [The Fed hawkish](https://news.google.com/articles/...) masih jadi tekanan utama. [Fear Greed Index](https://alternative.me) 11 (Extreme Fear).
+Gold dropped to $3,985 after failing to hold above $4,000. [The Fed hawkish stance](https://news.google.com/articles/...) remains the main pressure. [Fear Greed Index](https://alternative.me) 11 (Extreme Fear).
 
 **Technical Market Analysis**
-Harga $3,985 di bawah SMA20 ($4,221) dan Fib 78.6% ($4,097) — bearish.
+Price $3,985 below SMA20 ($4,221) and Fib 78.6% ($4,097) — bearish.
+
 ```
-Level                    Harga
+Level                    Price
 Swing High 30d           $4,591
 SMA20                    $4,221
 Fib 78.6%                $4,097
-Harga Saat Ini           $3,985
+Current Price            $3,985
 Swing Low 30d            $3,955
 BB Lower                 $3,906
 ```
+
 RSI 36.5 — Bearish
 Volume — Normal
 
 **Price Movement Analysis**
-Harga turun dari $4,047 ke $3,985 — gagal bertahan di atas $4,000. Wave 3 turun Astronacci, saat ini menguji swing low intraday $3,983. Kalo tembus, target $3,955 (wave 5). Potensi bounce ke $4,030 kalo bertahan.
+Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci Wave 3 down, currently testing intraday swing low at $3,983. If it breaks, target $3,955 (Wave 5). Potential bounce to $4,030 if it holds.
 
 **Waiting, Sell Area**
 ✷ ENTRY SELL : 4,030 - 4,033
@@ -76,11 +78,12 @@ Harga turun dari $4,047 ke $3,985 — gagal bertahan di atas $4,000. Wave 3 turu
 ✧ STOP LOSS : 3,973
 
 **Mirroring Assistant Intraday**
-Bearish dominan. Harga di swing low $3,983 — kalo tembus, target $3,955. Sell bounce ke $4,030-4,033. Buy zona support $3,982-3,985 untuk scalping, SL ketat $3,973.
+Bearish dominant. Price at swing low $3,983 — if it breaks, target $3,955. Sell bounce to $4,030-4,033. Buy support zone $3,982-3,985 for scalping, tight SL $3,973.
 
 **XAUUSD History Data**
+
 ```
-XAUUSD, 1 Juli 2026
+XAUUSD, 1 July 2026
 ✷ A1 : Waiting Order
 ```
 
@@ -98,79 +101,79 @@ Entry Sell M15 : Running
 ✷ SL : X,XXX Safe
 ```
 
-**Update sekarang JAM WIB :**
-[update harga, jarak ke TP/SL]
+**Update at HH:MM WIB :**
+[price update, distance to TP/SL]
 
-### Labels History Data
+### History Data Labels
 
-- `TP4 : 1000 Pips` = TP1 sampe TP4 kena semua
-- `TP3 : 500 Pips` = sampe TP3 kena
-- `TP2 : 200 Pips` = sampe TP2 kena
-- `TP1 : 100 Pips` = cuma TP1 kena
-- `SL` = kena SL langsung
-- `Running` = entry ke-hit, posisi jalan
-- `Waiting Order` = entry belum kena
+- `TP4 : 1000 Pips` = TP1 to TP4 all hit
+- `TP3 : 500 Pips` = TP3 hit
+- `TP2 : 200 Pips` = TP2 hit
+- `TP1 : 100 Pips` = only TP1 hit
+- `SL` = Stop loss hit directly
+- `Running` = entry hit, position still open
+- `Waiting Order` = entry not yet triggered
 
 ### RR Ratio (M15 Only)
 
 - Entry range: 30 pips
-- SL: 100 pips dari mid entry
+- SL: 100 pips from mid entry
 - TP1: 100 pips (1:1)
 - TP2: 200 pips (1:2)
 - TP3: 500 pips (1:5)
 - TP4: 1000 pips (1:10)
 - Mid entry = (low + high) / 2
 
-## SL Variations
+## SL Status Variations
 
-- `Safe` : Belum kena SL
-- `Okelah, TP1 Tadi` : TP1 Hit dulu, baru SL Hit
-- `Tak Kena :p` : Semua TP Hit
-- `Yah Maaf, Kena` : Langsung SL Hit
+- `Safe` : SL not yet hit
+- `Alright, TP1 Hit` : TP1 hit first, then SL hit
+- `All Good :p` : All TPs hit
+- `Sorry, SL Hit` : Direct SL hit
 
-## Aturan Wajib
+## Mandatory Rules
 
 ### Markdown Rules
 
-- **SEMUA judul** dan **section title** pakai bold markdown `** **`
-- **Tabel teknikal** dan **History Data** pakai code block ` ``` `
-- **Fundamental** — link berita di-embed di kalimat pake `[teks](link)`
-- **Waiting, Sell/Buy Area** — teks biasa, JANGAN di code block
-- **Mirroring Assistant Intraday** — teks biasa
+- **ALL titles** and **section titles** use bold markdown `** **`
+- **Technical table** and **History Data** use code block ` ``` `
+- **Fundamental** — news links embedded in text using `[text](link)`
+- **Waiting, Sell/Buy Area** — plain text, DO NOT put in code block
+- **Mirroring Assistant Intraday** — plain text
 
-### Judul
+### Title Format
 
-- **XAUUSD - $HARGA Live Analyst1** (bold)
-- **TANGGAL, JAM WIB** (bold baris bawah)
-- Format tanggal: DD MONTH YYYY, 24JAM WIB
-- Nomor analisa bertambah tiap kali: Analyst1, Analyst2, Analyst3, dst.
+- **XAUUSD - $PRICE Live Analyst1** (bold)
+- **DATE, TIME WIB** (bold second line)
+- Date format: DD MONTH YYYY, 24HR WIB
+- Analysis number increments: Analyst1, Analyst2, Analyst3, etc.
 
-### Kapan Bikin Analisa Baru
+### When to Create New Analysis
 
-- Analisa pertama hari ini = Analyst1 (lengkap fundamental + fib + tabel)
-- Jangan bikin analisa baru sebelum entry kena TP2 atau SL (kecuali user minta)
-- Entry yang masih running (TP3/TP4) jangan dihapus — masuk ke Mirroring Running Area
+- First analysis of the day = Analyst1 (full fundamental + fib + table)
+- Do not create new analysis until entry hits TP2 or SL (unless user requests)
+- Entries still running (TP3/TP4) must NOT be removed — move to Mirroring Running Area
 
-### Fundamental
+### Fundamental Section
 
-- WAJIB ambil berita dari news scraper dulu
-- 2-3 kalimat: inflasi, suku bunga, geopolitik, NFP/CPI/FOMC
-- Link sumber di-embed di kalimat
-- Wajib include Fear & Greed Index
+- MUST fetch news from news scraper first
+- 2-3 sentences: inflation, interest rates, geopolitics, NFP/CPI/FOMC
+- Source links embedded in text
+- MUST include Fear & Greed Index
 
 ### Entry Area
 
 - Entry range: 30 pips
-- SL 100 pips dari mid entry
-- TP1 100 (1:1), TP2 200 (1:2), TP3 500 (1:5), TP4 1000 (1:10)
-- Cari zone support/resistance terdekat dari harga
+- SL: 100 pips from mid entry
+- TP1: 100 (1:1), TP2: 200 (1:2), TP3: 500 (1:5), TP4: 1000 (1:10)
+- Find nearest support/resistance zones from current price
 
 ### History Data in Output
 
-- Hanya tampilkan data hari ini doang
-- Data hari sebelumnya hanya kalo user minta
-- Waiting Order TETAP ditampilkan
-- Kalo hanya ada Waiting Order, section History Data TETAP muncul
+- Only show current day's data
+- Previous days' data only if user requests
+- Waiting Order MUST still be shown
+- If only Waiting Order exists, History Data section MUST still appear
 
 ## Data Sources
 
@@ -181,5 +184,5 @@ Entry Sell M15 : Running
 
 ## Skill Overlap
 
-⚠️ `research/market-research` (SUPERSEDED) — jangan dipake. `research/market-analysis-format` ini yang bener.
-⚠️ Old `market-ecosystem` skill — sudah dimerger ke sini. Jangan pake yang lama.
+⚠️ `research/market-research` (SUPERSEDED) — do not use. `research/market-analysis-format` is the correct one.
+⚠️ Old `market-ecosystem` skill — already merged into this one. Do not use the old version.
