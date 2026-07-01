@@ -1,9 +1,9 @@
 ---
-name: market-analysis-format-aes
-description: Market analysis format standard by @mftrferdinand - Astronacci + Fibonacci + Fear & Greed, universal for XAUUSD/BTC/forex/index
+name: MarketAnalysis-FormatAiAgent
+description: Market analysis format standard - Astronacci + Fibonacci + Fear & Greed, universal for XAUUSD/BTC/forex/index
 ---
 
-# Market Analysis Format — AES
+# Market Analysis Format — AI Agent
 
 ## 🔴 CRITICAL: ABSOLUTE FORMAT — DO NOT IMPROVISE
 
@@ -19,7 +19,7 @@ This format has been through 20+ iterations and the user gets FURIOUS every time
 8. Never send over-formatted output (code block in entry area, etc.)
 9. Applies to ALL pairs (XAUUSD, BTC, EURUSD, etc.)
 
-Market analysis format using Astronacci + Fibonacci standard. Works for any pair. Author: @mftrferdinand.
+Market analysis format using Astronacci + Fibonacci standard. Works for any pair.
 
 ## Agent Persona
 
@@ -59,12 +59,12 @@ When user says "analisa xauusd", "analisa btc", "analisa eurusd", or similar:
 ## Installation
 
 ```
-hermes skills install https://raw.githubusercontent.com/Mftrferdinand/market-analysis-format-aes/main/SKILL.md
+hermes skills install https://raw.githubusercontent.com/Mftrferdinand/MarketAnalysis-FormatAiAgent/main/SKILL.md
 ```
 
 Or clone into `~/.hermes/skills/`:
 ```
-git clone https://github.com/Mftrferdinand/market-analysis-format-aes ~/.hermes/skills/research/market-analysis-format
+git clone https://github.com/Mftrferdinand/MarketAnalysis-FormatAiAgent ~/.hermes/skills/research/MarketAnalysis-FormatAiAgent
 ```
 
 ## Output Format
@@ -222,5 +222,5 @@ Entry Sell M15 : Running
 
 ## Skill Overlap
 
-⚠️ `research/market-research` (SUPERSEDED) — do not use. `research/market-analysis-format` is the correct one.
-⚠️ Old `market-ecosystem` skill — already merged into this one. Do not use the old version.
+⚠️ `research/market-research` (SUPERSEDED) — do not use.
+⚠️ Old `market-ecosystem` skill — already merged. Do not use.
