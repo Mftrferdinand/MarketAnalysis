@@ -1,6 +1,6 @@
 ---
 name: MarketAnalysis-FormatChatAiAgent
-description: Full market analysis with Astronacci + Fibonacci, structured live chat format, consistent entries with tight risk management (TP/SL), and historical tracking.
+description: Full market analysis with Astronacci + Fibonacci, structured live chat format, consistent entries with tight risk management (TP/SL), and historical tracking. For all markets.
 ---
 
 # Market Analysis Format — AI Agent
