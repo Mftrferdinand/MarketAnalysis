@@ -5,9 +5,9 @@ description: Full market analysis with Astronacci + Fibonacci, structured live c
 
 # Market Analysis Format — AI Agent
 
-## 🔴 CRITICAL: ABSOLUTE FORMAT — DO NOT IMPROVISE
+## CRITICAL: ABSOLUTE FORMAT — DO NOT IMPROVISE
 
-This format has been through 20+ iterations and the user gets FURIOUS every time the format is wrong. READ THIS BEFORE ANY OUTPUT:
+This format has been through 20+ iterations. READ THIS BEFORE ANY OUTPUT:
 
 1. **Bold `** **`** for: main title, all section titles
 2. **Code block ` ``` `** for: technical table, history data — nothing else
@@ -15,9 +15,10 @@ This format has been through 20+ iterations and the user gets FURIOUS every time
 4. **Links MUST be embedded** in the Fundamental text using `[text](link)` — never put links separately at the end
 5. **Fear & Greed MUST** be in every Fundamental with link to alternative.me
 6. **History Data MUST appear** even if it's just Waiting Order
-7. Never send plain text output (without bold / without code block). The user gets ANGRY when this happens
+7. Never send plain text output (without bold / without code block)
 8. Never send over-formatted output (code block in entry area, etc.)
 9. Applies to ALL pairs (XAUUSD, BTC, EURUSD, etc.)
+10. DO NOT use M15/H4/D1 Mirroring Assistant format. Use ONLY: Waiting Sell Area, Waiting Buy Area, Mirroring Assistant Intraday.
 
 Complete market analysis package: fundamental macro analysis, technical Fibonacci + Astronacci wave structure, structured price action breakdown, consistent entry zones with fixed RR targets, and detailed risk management. Works for XAUUSD, BTC, forex, indices — any asset.
 
@@ -56,17 +57,6 @@ When user says "analisa xauusd", "analisa btc", "analisa eurusd", or similar:
 - **Waiting, Sell Area** (plain text) — new sell entries
 - **Waiting, Buy Area** (plain text) — new buy entries
 
-## Installation
-
-```
-hermes skills install https://raw.githubusercontent.com/Mftrferdinand/MarketAnalysis-FormatChatAiAgent/main/SKILL.md
-```
-
-Or clone into `~/.hermes/skills/`:
-```
-git clone https://github.com/Mftrferdinand/MarketAnalysis-FormatChatAiAgent ~/.hermes/skills/research/MarketAnalysis-FormatChatAiAgent
-```
-
 ## Output Format
 
 ### Full Template (XAUUSD) — EXACT Output Example
@@ -89,7 +79,6 @@ Current Price            $3,985
 Swing Low 30d            $3,955
 BB Lower                 $3,906
 ```
-
 RSI 36.5 — Bearish
 Volume — Normal
 
@@ -116,7 +105,6 @@ Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci 
 Bearish dominant. Price at swing low $3,983 — if it breaks, target $3,955. Sell bounce to $4,030-4,033. Buy support zone $3,982-3,985 for scalping, tight SL $3,973.
 
 **XAUUSD History Data**
-
 ```
 XAUUSD, 1 July 2026
 ✷ A1 : Waiting Order
@@ -148,7 +136,6 @@ Entry Sell M15 : Running
 - `SL` = Stop loss hit directly
 - `Running` = entry hit, position still open
 - `Waiting Order` = entry not yet triggered
-- `Waiting Order (Analyst1)` = entry from Analyst1 still waiting
 
 ### RR Ratio (M15 Only)
 
@@ -159,7 +146,7 @@ Entry Sell M15 : Running
 - TP3: 500 pips (1:5)
 - TP4: 1000 pips (1:10)
 - Mid entry = (low + high) / 2
-- **Consistency rule:** NEVER deviate from these RR ratios. Entry, SL, and TP distances are fixed regardless of market noise. This ensures disciplined risk management across all analysts.
+- **Consistency rule:** NEVER deviate from these RR ratios. Entry, SL, and TP distances are fixed regardless of market noise.
 
 ### Mid Entry Formula
 
@@ -195,6 +182,7 @@ TP4 = Mid ± 1000 pips
 
 - **XAUUSD - $PRICE Live Analyst1** (bold)
 - **DATE, TIME WIB** (bold second line)
+- XAUUSD History Data → code block immediately (no blank line between header and data)
 - Date format: DD MONTH YYYY, 24HR WIB
 - Analysis number increments: Analyst1, Analyst2, Analyst3, etc.
 
@@ -316,5 +304,5 @@ TP4 = Mid ± 1000 pips
 
 ## Skill Overlap
 
-⚠️ `research/market-research` (SUPERSEDED) — do not use.
-⚠️ Old `market-ecosystem` skill — already merged. Do not use.
+- `research/market-research` (SUPERSEDED) — do not use.
+- Old `market-ecosystem` skill — already merged. Do not use.
