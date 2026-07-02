@@ -11,13 +11,13 @@ This format has been through 20+ iterations. READ THIS BEFORE ANY OUTPUT:
 
 1. **Bold `** **`** for: main title, date line, all section titles
 2. **Code block ` ``` `** for: technical table, history data — nothing else
-3. **Plain text** for: Fundamental paragraph, Price Movement, Waiting Sell/Buy Area, Mirroring Assistant Intraday
+3. **Plain text** for: Fundamental paragraph, Price Movement, Waiting Sell/Buy Area, Assistant Intraday Outlook
 4. **Links MUST be embedded** in the Fundamental text using `[text](link)` — never put links separately at the end
 5. **History Data MUST appear** even if it's just Waiting Order — NO title header, just code block directly
 6. Never send plain text output (without bold / without code block)
 7. Never send over-formatted output (code block in entry area, etc.)
 8. Applies to ALL pairs (XAUUSD, BTC, EURUSD, etc.)
-9. DO NOT use M15/H4/D1 Mirroring Assistant format. Use ONLY: Waiting Sell Area, Waiting Buy Area, Mirroring Assistant Intraday.
+9. DO NOT use M15/H4/D1 Mirroring Assistant format. Use ONLY: Waiting Sell Area, Waiting Buy Area, Assistant Intraday Outlook.
 10. NO blank line between technical table code block and RSI line — they must be adjacent
 
 Complete market analysis package: fundamental macro analysis, technical Fibonacci + Astronacci wave structure, structured price action breakdown, consistent entry zones with fixed RR targets, and detailed risk management. Works for XAUUSD, BTC, forex, indices — any asset.
@@ -114,7 +114,7 @@ BB Lower                 $3,906
 RSI 36.5 — Bearish
 Volume — Normal
 
-**Price Movement Analysis**
+**Price Action Analysis**
 Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci Wave 3 down, currently testing intraday swing low at $3,983. If it breaks, target $3,955 (Wave 5). Potential bounce to $4,030 if it holds.
 
 **Waiting, Sell Area**
@@ -133,7 +133,7 @@ Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci 
 ✧ TAKE PROFIT 4 : 4,083
 ✧ STOP LOSS : 3,973
 
-**Mirroring Assistant Intraday**
+**Assistant Intraday Outlook**
 Bearish dominant. Price at swing low $3,983 — if it breaks, target $3,955. Sell bounce to $4,030-4,033. Buy support zone $3,982-3,985 for scalping, tight SL $3,973.
 
 ```
@@ -170,7 +170,7 @@ Entry Sell M15 : Running
 
 ### History Data Format (Code Block)
 
-- No title header — code block appears directly after Mirroring Assistant Intraday
+- No title header — code block appears directly after Assistant Intraday Outlook
 - First line: `XAUUSD, DD MONTH YYYY`
 - Second line: `✷ A[N] : [result]` where N = analyst number (berlanjut antar hari)
 - A1 = Analysis 1, A2 = Analysis 2, A3 = Analysis 3...
@@ -217,7 +217,7 @@ TP4 = Mid ± 1000 pips
 - **Technical table** and **History Data** use code block ` ``` `
 - **Fundamental** — news links embedded in text using `[text](link)`
 - **Waiting, Sell/Buy Area** — plain text, DO NOT put in code block. Use ✷ for SELL, ✧ for BUY
-- **Mirroring Assistant Intraday** — plain text
+- **Assistant Intraday Outlook** — plain text
 - **History Data** — code block directly, NO title header before it
 - **NO blank line** between technical table code block closing ``` and RSI line
 
@@ -254,7 +254,7 @@ TP4 = Mid ± 1000 pips
 - Mid entry = (entry_low + entry_high) / 2
 - Never widen SL or compress TP. These are fixed risk parameters.
 
-### Price Movement Analysis
+### Price Action Analysis
 
 - Cover last 6 hours of price action
 - Include M15/1H/4H context
@@ -262,7 +262,7 @@ TP4 = Mid ± 1000 pips
 - Nearest support/resistance levels
 - Narrative format, not bullet points
 
-## Price Movement Analysis Guidelines
+## Price Action Analysis Guidelines
 
 ### Wave Structure (Astronacci / Elliott Wave)
 
