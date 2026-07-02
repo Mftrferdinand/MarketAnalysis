@@ -13,12 +13,12 @@ This format has been through 20+ iterations. READ THIS BEFORE ANY OUTPUT:
 2. **Code block ` ``` `** for: technical table, history data — nothing else
 3. **Plain text** for: Fundamental paragraph, Price Movement, Waiting Sell/Buy Area, Mirroring Assistant Intraday
 4. **Links MUST be embedded** in the Fundamental text using `[text](link)` — never put links separately at the end
-5. **Fear & Greed MUST** be in every Fundamental with link to alternative.me
-6. **History Data MUST appear** even if it's just Waiting Order
-7. Never send plain text output (without bold / without code block)
-8. Never send over-formatted output (code block in entry area, etc.)
-9. Applies to ALL pairs (XAUUSD, BTC, EURUSD, etc.)
-10. DO NOT use M15/H4/D1 Mirroring Assistant format. Use ONLY: Waiting Sell Area, Waiting Buy Area, Mirroring Assistant Intraday.
+5. **History Data MUST appear** even if it's just Waiting Order — NO title header, just code block directly
+6. Never send plain text output (without bold / without code block)
+7. Never send over-formatted output (code block in entry area, etc.)
+8. Applies to ALL pairs (XAUUSD, BTC, EURUSD, etc.)
+9. DO NOT use M15/H4/D1 Mirroring Assistant format. Use ONLY: Waiting Sell Area, Waiting Buy Area, Mirroring Assistant Intraday.
+10. NO blank line between technical table code block and RSI line — they must be adjacent
 
 Complete market analysis package: fundamental macro analysis, technical Fibonacci + Astronacci wave structure, structured price action breakdown, consistent entry zones with fixed RR targets, and detailed risk management. Works for XAUUSD, BTC, forex, indices — any asset.
 
@@ -38,11 +38,35 @@ When user says "analisa xauusd", "analisa btc", "analisa eurusd", or similar:
 4. **Dilarang nanya timeframe/scalping/swing/entry** — langsung gas
 5. For non-gold assets: adapt the template accordingly (same structure)
 
+### Analyst Numbering System
+
+**CRITICAL: Analyst number berlanjut antar hari, TIDAK reset per hari.**
+
+Rules:
+- Analyst number hanya NAIK jika order dari analysis sebelumnya KE ENTRY (ke jemput)
+- Jika order TIDAK ke entry, number TIDAK naik — besoknya tetap number yang sama
+- Number berlanjut dari hari kemarin: 29 June A1 → 29 June A2 → 30 June A3 → 1 July A4...
+- Jika A20 tidak ke order hari ini, besoknya tetap A20 (bukan A21)
+
+Contoh:
+- 29 June: Analysis 1 → ke order → catat A1
+- 29 June: Analysis 2 (jika diminta) → ke order → catat A2
+- 30 June: Analysis 3 (lanjut dari kemarin, bukan A1 lagi)
+- 7 July: Analysis 20 → TIDAK ke order
+- 8 July: Analysis 20 lagi (karena A20 tidak ke entry, number tidak naik)
+- 8 July: Jika A20 ke order → 9 July menjadi Analysis 21
+
+History data label mengikuti analyst number:
+- A1 = Analysis 1
+- A2 = Analysis 2
+- A3 = Analysis 3
+- Jangan ulang dari A1 setiap hari
+
 ### When to Create New Analysis
 
-- First analysis of the day = **Live Analyst1**. Full fundamental + fib + table.
+- First analysis of the day = lanjutan dari analyst number terakhir yang KE ORDER
 - **Do NOT** create a new analysis before the current entry hits **TP2** or **SL**. Unless user explicitly asks.
-- Each subsequent analysis increments the number: Analyst1, Analyst2, Analyst3, etc.
+- Each subsequent analysis increments the number: Analyst1, Analyst2, Analyst3, etc. (berlanjut antar hari)
 - Entries still running (TP3/TP4) must NOT be removed — move to **Mirroring Running Area** (code block format)
 - Entries not yet hit → **Waiting, Sell/Buy Area** (plain text format)
 - Only create a new analysis if the user ASKS for it
@@ -65,7 +89,7 @@ When user says "analisa xauusd", "analisa btc", "analisa eurusd", or similar:
 **1 July 2026, 09:52 WIB**
 
 **Fundamental Economic Global**
-Gold dropped to $3,985 after failing to hold above $4,000. [The Fed hawkish stance](https://news.google.com/articles/...) remains the main pressure. [Fear Greed Index](https://alternative.me) 11 (Extreme Fear).
+Gold dropped to $3,985 after failing to hold above $4,000. [The Fed hawkish stance](https://news.google.com/articles/...) remains the main pressure.
 
 **Technical Market Analysis**
 Price $3,985 below SMA20 ($4,221) and Fib 78.6% ($4,097) — bearish.
@@ -104,7 +128,6 @@ Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci 
 **Mirroring Assistant Intraday**
 Bearish dominant. Price at swing low $3,983 — if it breaks, target $3,955. Sell bounce to $4,030-4,033. Buy support zone $3,982-3,985 for scalping, tight SL $3,973.
 
-**XAUUSD History Data**
 ```
 XAUUSD, 1 July 2026
 ✷ A1 : Waiting Order
@@ -136,6 +159,18 @@ Entry Sell M15 : Running
 - `SL` = Stop loss hit directly
 - `Running` = entry hit, position still open
 - `Waiting Order` = entry not yet triggered
+
+### History Data Format
+
+- NO title header — code block appears directly after Mirroring Assistant Intraday
+- First line: `XAUUSD, DD MONTH YYYY`
+- Second line: `✷ A[N] : [result]` where N = analyst number (berlanjut antar hari)
+- A1 = Analysis 1, A2 = Analysis 2, A3 = Analysis 3...
+- Jika A1 ke order hari ini, besoknya A2 (bukan A1 lagi)
+- Jika A1 TIDAK ke order, besoknya tetap A1
+- Only show current day's data
+- Waiting Order MUST still be shown
+- If only Waiting Order exists, History Data section MUST still appear
 
 ### RR Ratio (M15 Only)
 
@@ -177,18 +212,19 @@ TP4 = Mid ± 1000 pips
 - **Fundamental** — news links embedded in text using `[text](link)`
 - **Waiting, Sell/Buy Area** — plain text, DO NOT put in code block
 - **Mirroring Assistant Intraday** — plain text
+- **History Data** — code block directly, NO title header before it
+- **NO blank line** between technical table code block closing ``` and RSI line
 
 ### Title Format
 
-- **XAUUSD - $PRICE Live Analyst1** (bold)
+- **XAUUSD - $PRICE Live Analyst[N]** (bold) — N berlanjut antar hari
 - **DATE, TIME WIB** (bold second line)
-- XAUUSD History Data → code block immediately (no blank line between header and data)
 - Date format: DD MONTH YYYY, 24HR WIB
-- Analysis number increments: Analyst1, Analyst2, Analyst3, etc.
+- Analysis number increments: Analyst1, Analyst2, Analyst3, etc. (berlanjut, tidak reset per hari)
 
 ### When to Create New Analysis
 
-- First analysis of the day = **Live Analyst1** (full fundamental + fib + table)
+- First analysis of the day = lanjutan dari analyst number terakhir yang KE ORDER
 - **Do NOT** create a new analysis before the current entry hits **TP2** or **SL**. Unless user explicitly asks.
 - Each subsequent analysis increments the number: Analyst1, Analyst2, Analyst3, etc.
 - Entries still running (TP3/TP4) must NOT be removed — move to **Mirroring Running Area** (code block format)
@@ -207,15 +243,15 @@ TP4 = Mid ± 1000 pips
 - MUST fetch news from news scraper first
 - 2-3 sentences: inflation, interest rates, geopolitics, NFP/CPI/FOMC
 - Source links embedded in text
-- MUST include Fear & Greed Index
 - Mention upcoming catalysts (FOMC, NFP, CPI) when relevant
+- DO NOT use alternative.me or Fear & Greed Index
 
 ### Technical Section
 
 - Fibonacci levels from swing high 30d to swing low 30d
 - SMA20 (20-day moving average) as dynamic resistance/support
 - BB Lower as extreme support
-- RSI reading and interpretation
+- RSI reading and interpretation — MUST be directly below code block (no blank line)
 - Volume analysis
 - Astronacci/Elliott Wave structure context
 
@@ -227,14 +263,6 @@ TP4 = Mid ± 1000 pips
 - Find nearest support/resistance zones from current price
 - Mid entry = (entry_low + entry_high) / 2
 - Never widen SL or compress TP. These are fixed risk parameters.
-
-### History Data in Output
-
-- Only show current day's data
-- Previous days' data only if user requests
-- Waiting Order MUST still be shown
-- If only Waiting Order exists, History Data section MUST still appear
-- Each analyst line shows the result: Waiting Order, TP2 : 200 Pips, SL, etc.
 
 ### Price Movement Analysis
 
@@ -298,7 +326,6 @@ TP4 = Mid ± 1000 pips
 
 - Gold spot: gold-api.com + fxratesapi
 - Gold futures: Yahoo Finance GC=F
-- Fear & Greed: alternative.me
 - News: Google News RSS
 - Economic calendar: Investing.com / ForexFactory
 

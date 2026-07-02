@@ -1,26 +1,42 @@
-# Data Sources
+# Data Sources & API Endpoints
 
-## Gold Spot (XAUUSD)
-- **gold-api.com**: `https://api.gold-api.com/price/XAU` — returns JSON `{"price": 1234.56}`
-- **fxratesapi**: `https://api.fxratesapi.com/latest?base=XAU&symbols=USD` — returns JSON with rates
+## Gold Spot
+```
+https://api.gold-api.com/price/XAU
+```
 
-## Gold Futures (GC=F)
-- **Yahoo Finance**: `https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=2mo&interval=1d` — daily OHLCV for 2 months
-- **Yahoo Finance hourly**: `https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=5d&interval=1h` — hourly OHLCV for 5 days
+## FX Rate (fallback)
+```
+https://api.fxratesapi.com/latest?base=XAU&currencies=USD
+```
 
-## Fear & Greed Index
-- **alternative.me**: `https://api.alternative.me/fng/?limit=1` — returns JSON `{"data":[{"value":"11","value_classification":"Extreme Fear"}]}`
+## Gold Futures — Daily (2mo)
+```
+https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=2mo&interval=1d
+```
 
-## News
-- **Google News RSS**: `https://news.google.com/rss/search?q=gold+XAUUSD+price+fed&hl=en-US&gl=US&ceid=US:en` — returns XML feed
-- **News scraper script**: `~/.hermes/scripts/news_search.py` — searches Google News RSS and returns top headlines with links
+## Gold Futures — Hourly (5d)
+```
+https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=5d&interval=1h
+```
 
-## Economic Calendar
-- **Investing.com**: `https://www.investing.com/economic-calendar/` — upcoming events (FOMC, NFP, CPI)
-- **ForexFactory**: `https://www.forexfactory.com/calendar.php` — economic calendar
+## DXY Index
+```
+https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1d&interval=1m
+```
 
-## Bitcoin (BTC)
-- **CoinGecko**: `https://api.coingecko.com/api/v3/coins/bitcoin` — full market data
-- **CoinGecko price**: `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd` — simple price
-- **CoinGecko OHLCV**: `https://api.coingecko.com/api/v3/coins/bitcoin/ohlc?vs_currency=usd&days=30` — 30-day OHLCV
-- **CoinGecko chart**: `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=30` — 30-day market chart
+## News (Google RSS)
+```
+python3 ~/.hermes/scripts/news_search.py "gold+XAUUSD+price+fed"
+```
+
+## BTC
+```
+https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
+https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD?range=2mo&interval=1d
+```
+
+## Local Scripts
+- News: ~/.hermes/scripts/news_search.py "keyword"
+- Netflix: ~/.hermes/scripts/netflix_decode.py
+- Monitor: ~/.hermes/scripts/monitor_xauusd.py

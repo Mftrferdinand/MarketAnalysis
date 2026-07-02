@@ -8,7 +8,7 @@ Below is a complete example of the output format. Every analysis MUST follow thi
 **1 July 2026, 09:52 WIB**
 
 **Fundamental Economic Global**
-Gold dropped to $3,985 after failing to hold above $4,000. [The Fed hawkish stance](https://news.google.com/articles/...) remains the main pressure. [Fear Greed Index](https://alternative.me) 11 (Extreme Fear).
+Gold dropped to $3,985 after failing to hold above $4,000. [The Fed hawkish stance](https://news.google.com/articles/...) remains the main pressure.
 
 **Technical Market Analysis**
 Price $3,985 below SMA20 ($4,221) and Fib 78.6% ($4,097) — bearish.
@@ -47,13 +47,55 @@ Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci 
 **Mirroring Assistant Intraday**
 Bearish dominant. Price at swing low $3,983 — if it breaks, target $3,955. Sell bounce to $4,030-4,033. Buy support zone $3,982-3,985 for scalping, tight SL $3,973.
 
-**XAUUSD History Data**
 ```
 XAUUSD, 1 July 2026
 ✷ A1 : Waiting Order
 ```
 
 ---
+
+## Analyst Numbering Example
+
+Analyst number berlanjut antar hari, hanya naik jika order KE ENTRY:
+
+Day 1 (29 June):
+```
+XAUUSD, 29 June 2026
+✷ A1 : Waiting Order
+```
+
+Day 1 (29 June, analysis 2 — user requested):
+```
+XAUUSD, 29 June 2026
+✷ A1 : TP2 : 200 Pips
+✷ A2 : Waiting Order
+```
+
+Day 2 (30 June — A1 hit order, A2 not hit):
+```
+XAUUSD, 30 June 2026
+✷ A3 : Waiting Order
+```
+(A2 tidak ke entry → number tidak naik untuk A2, tapi A1 ke entry → A3 adalah analysis berikutnya)
+
+Day 3 (1 July — A3 hit order):
+```
+XAUUSD, 1 July 2026
+✷ A4 : Waiting Order
+```
+
+Day 4 (2 July — A4 NOT hit):
+```
+XAUUSD, 2 July 2026
+✷ A4 : Waiting Order
+```
+(A4 tidak ke entry → number tetap A4, bukan A5)
+
+Day 5 (3 July — A4 hit order):
+```
+XAUUSD, 3 July 2026
+✷ A5 : Waiting Order
+```
 
 ## Trade Update Example
 
@@ -70,17 +112,14 @@ Entry Sell M15 : Running
 ```
 
 **Update at 11:30 WIB :**
-Price at $4,015 — TP1 hit, TP2 at $4,011 is 4 pips away. SL at $4,041 is safe (26 pips above).</think>
-```
-
-This shows a running sell position where TP1 has been hit and TP2 is approaching. SL is safe.
+Price at $4,015 — TP1 hit, TP2 at $4,011 is 4 pips away. SL at $4,041 is safe (26 pips above).
 
 ## Entry with Running Position Example
 
 When there are active running positions, the output includes BOTH running area and waiting area:
 
 **Mirroring Running Area**
-```code block
+```
 Entry Sell M15 : Running
 ✷ Entry : 4,030 - 4,033 Hit
 ✷ TP1 : 4,021 Hit
@@ -91,7 +130,6 @@ Entry Sell M15 : Running
 ```
 
 **Mirroring Waiting Area**
-plain text
 ✷ ENTRY SELL : 4,120 - 4,123
 ✷ TAKE PROFIT 1 : 4,110
 ✷ TAKE PROFIT 2 : 4,100
