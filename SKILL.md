@@ -314,10 +314,21 @@ TP4 = Mid ± 1000 pips
 
 ## Data Sources
 
+**CRITICAL: Minimum 3-4 cross-checked, interrelated & trusted sources for Fundamental section. NOT just Forex Factory alone.**
+
+### Price & Technical Data
 - Gold spot: gold-api.com + fxratesapi
 - Gold futures: Yahoo Finance GC=F
-- News: Google News RSS
-- Economic calendar: Investing.com / ForexFactory
+- Crypto (BTC, ETH, etc.): CoinGecko API (OHLC, price, volume)
+- DXY Index: Yahoo Finance DX-Y.NYB
+
+### Fundamental News Sources (3-4 cross-check REQUIRED)
+1. **Forex Factory Calendar** — Economic events (NFP, FOMC, CPI). API: `nfs.faireconomy.media/ff_calendar_thisweek.json`
+2. **Investing.com / TradingView** — Price overview, technical analysis, economic calendar
+3. **Reuters / Bloomberg / CNBC** — Global macro news (Fed policy, geopolitics, inflation data)
+4. **Google News RSS** — Broad news search via `news_search.py` script
+
+**Cross-check rule:** Before writing Fundamental section, verify key data across at least 3 of these sources. Never rely on a single source.
 
 ## Skill Overlap
 
