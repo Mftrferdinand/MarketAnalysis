@@ -19,6 +19,7 @@ This format has been through 20+ iterations. READ THIS BEFORE ANY OUTPUT:
 8. Applies to ALL pairs (XAUUSD, BTC, EURUSD, etc.)
 9. DO NOT use M15/H4/D1 Mirroring Assistant format. Use ONLY: Waiting Sell Area, Waiting Buy Area, Assistant Intraday Outlook.
 10. NO blank line between technical table code block and RSI line — they must be adjacent
+11. **Assistant Intraday Outlook MUST use observational/descriptive language only** — NEVER use directive language (no "buy", "sell", "entry sekarang", "wait for trigger", "take profit", etc.). Frame everything as conditions, zones, and scenarios. See "Assistant Intraday Outlook Language Rules" section for details.
 
 Complete market analysis package: fundamental macro analysis, technical Fibonacci + Astronacci wave structure, structured price action breakdown, consistent entry zones with fixed RR targets, and detailed risk management. Works for XAUUSD, BTC, forex, indices — any asset.
 
@@ -114,7 +115,7 @@ BB Lower                 $3,906
 RSI 36.5 — Bearish
 Volume — Normal
 
-**Price Action Analysis**
+**Price Movement Analysis**
 Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci Wave 3 down, currently testing intraday swing low at $3,983. If it breaks, target $3,955 (Wave 5). Potential bounce to $4,030 if it holds.
 
 **Waiting, Sell Area**
@@ -134,7 +135,7 @@ Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci 
 ✧ STOP LOSS : 3,973
 
 **Assistant Intraday Outlook**
-Bearish dominant. Price at swing low $3,983 — if it breaks, target $3,955. Sell bounce to $4,030-4,033. Buy support zone $3,982-3,985 for scalping, tight SL $3,973.
+Bearish bias dominant. Price at swing low $3,983 — breakdown below targets $3,955. Resistance bounce zone identified at $4,030-4,033. Support zone $3,982-3,985 aligns with buy area. Tight risk reference at $3,973.
 
 ```
 XAUUSD, 1 July 2026
@@ -221,6 +222,29 @@ TP4 = Mid ± 1000 pips
 - **History Data** — code block directly, NO title header before it
 - **NO blank line** between technical table code block closing ``` and RSI line
 
+### Assistant Intraday Outlook Language Rules
+
+**CRITICAL: This section is for analytical reference only — NOT trading advice or solicitation.**
+
+The Outlook must remain neutral, observational, and descriptive. It describes what the data shows, not what the reader should do.
+
+**FORBIDDEN directive language (NEVER use):**
+- "buy now", "sell here", "entry sekarang", "take the trade"
+- "wait for trigger", "execute at", "masuk di"
+- "take profit", "cut loss", "hold position"
+- "recommended entry", "suggested trade"
+- Any imperative verb addressing the reader
+
+**ALLOWED observational language (ALWAYS use):**
+- "Bias identified as..." / "Structure suggests..."
+- "Support zone at..." / "Resistance zone at..."
+- "Break above X targets Y" / "Breakdown below X exposes Y"
+- "Zone aligns with..." / "Level coincides with..."
+- "Risk reference at..." / "Invalidation level at..."
+- Conditions and scenarios: "If price holds X, bullish structure intact"
+- Descriptive momentum: "recovering from oversold", "consolidating near"
+- NEVER mention entry, execution, or position management
+
 ### Title Format
 
 - **XAUUSD - $PRICE Live Analyst[N]** (bold) — N berlanjut antar hari
@@ -254,7 +278,7 @@ TP4 = Mid ± 1000 pips
 - Mid entry = (entry_low + entry_high) / 2
 - Never widen SL or compress TP. These are fixed risk parameters.
 
-### Price Action Analysis
+### Price Movement Analysis
 
 - Cover last 6 hours of price action
 - Include M15/1H/4H context
@@ -262,7 +286,7 @@ TP4 = Mid ± 1000 pips
 - Nearest support/resistance levels
 - Narrative format, not bullet points
 
-## Price Action Analysis Guidelines
+## Price Movement Analysis Guidelines
 
 ### Wave Structure (Astronacci / Elliott Wave)
 
@@ -319,7 +343,7 @@ TP4 = Mid ± 1000 pips
 ### Price & Technical Data
 - Gold spot: gold-api.com + fxratesapi
 - Gold futures: Yahoo Finance GC=F
-- Crypto (BTC, ETH, etc.): CoinGecko API (OHLC, price, volume)
+- Crypto (BTC, ETH, etc.): CoinGecko API — `api.coingecko.com/api/v3/coins/{id}/ohlc?vs_currency=usd&days=30` for OHLC, `api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd` for current price
 - DXY Index: Yahoo Finance DX-Y.NYB
 
 ### Fundamental News Sources (3-4 cross-check REQUIRED)
@@ -329,6 +353,24 @@ TP4 = Mid ± 1000 pips
 4. **Google News RSS** — Broad news search via `news_search.py` script
 
 **Cross-check rule:** Before writing Fundamental section, verify key data across at least 3 of these sources. Never rely on a single source.
+
+### Crypto Analysis Notes
+- CoinGecko IDs: `bitcoin`, `ethereum`, `solana`, etc.
+- OHLC endpoint returns 4-hour candles for 30-day window — use for Fib levels, SMA20, BB
+- Volume data: `market_chart?vs_currency=usd&days=7&interval=daily` returns total_volumes array
+- Binance API may timeout from Termux — CoinGecko is reliable fallback
+
+### Economic Event Verification (CRITICAL)
+
+**BEFORE any analysis**, check Forex Factory for upcoming high-impact events (NFP, FOMC, CPI, etc.):
+
+```bash
+curl -s "https://nfs.faireconomy.media/ff_calendar_thisweek.json" | python -m json.tool | grep -A 20 -i "non-farm\|FOMC\|CPI"
+```
+
+This returns JSON with exact dates/times. **Do not guess event dates** — always verify. Events affect volatility and entry timing.
+
+**Pitfall**: NFP releases on first Friday of month at 08:30 AM EDT (19:30 WIB). But ALWAYS verify with the API — don't assume based on day of week.
 
 ## Skill Overlap
 

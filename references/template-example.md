@@ -46,7 +46,7 @@ Price dropped from $4,047 to $3,985 — failed to hold above $4,000. Astronacci 
 ✧ TAKE PROFIT 4 : 4,083
 ✧ STOP LOSS : 3,973
 
-**Mirroring Assistant Intraday**
+**Assistant Intraday Outlook**
 Bearish dominant. Price at swing low $3,983 — if it breaks, target $3,955. Sell bounce to $4,030-4,033. Buy support zone $3,982-3,985 for scalping, tight SL $3,973.
 
 ```
