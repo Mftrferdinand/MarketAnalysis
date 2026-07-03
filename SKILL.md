@@ -257,6 +257,7 @@ The Outlook must remain neutral, observational, and descriptive. It describes wh
 - MUST fetch news from news scraper first
 - 2-3 sentences: inflation, interest rates, geopolitics, NFP/CPI/FOMC
 - Source links embedded in text
+- **Links MUST be to readable news articles ONLY** (Google News, Reuters, Bloomberg, FXStreet, CNBC, Investing.com) — NEVER link to raw API/JSON endpoints like `ff_calendar_thisweek.json`, that data is for backend verification only
 - Mention upcoming catalysts (FOMC, NFP, CPI) when relevant
 - DO NOT use alternative.me or Fear & Greed Index
 
