@@ -1,0 +1,14 @@
+# Secrets — NEVER COMMIT
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Local state / tracking data (jangan di-share)
+*.json
+
+# Logs
+*.log
